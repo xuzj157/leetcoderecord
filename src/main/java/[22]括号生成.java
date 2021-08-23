@@ -29,11 +29,18 @@
 // 👍 1964 👎 0
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<String> generateParenthesis(int n) {
+class Solution22 {
+
+    public static void main(String[] args) {
+        generateParenthesis(0);
+    }
+
+
+    public static List<String> generateParenthesis(int n) {
         List<String> rtnList = new ArrayList<>();
         a("", 0, n, rtnList);
         return rtnList;
@@ -42,6 +49,7 @@ class Solution {
     public static void a(String s, int rightRemain, int leftRemain, List<String> rtnList) {
         //terminator
         if (leftRemain == 0 && rightRemain == 0) {
+            System.out.println(s);
             rtnList.add(s);
             return;
         }
@@ -55,6 +63,5 @@ class Solution {
         //drill down
         //reverse states
     }
-
 }
 //leetcode submit region end(Prohibit modification and deletion)
